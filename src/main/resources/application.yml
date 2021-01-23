@@ -1,0 +1,9 @@
+server:
+  port: 8082
+
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    authenticate:
+        path: /authenticate/**
+        url: http://localhost:8080/
